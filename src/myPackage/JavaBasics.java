@@ -6,5 +6,7 @@ public class JavaBasics {
         System.out.println("Hi");
         System.out.println("Helloo..");
         System.out.println("checking the code");
+        System.out.println("Nice...");
+
     }
 }
