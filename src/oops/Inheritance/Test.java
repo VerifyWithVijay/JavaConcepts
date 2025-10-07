@@ -11,7 +11,7 @@ public class Test {
        A obj2 = new B();
        obj2.show();
 
-       B obj3 = new A();
+      // B obj3 = new A();
 
 
     }
