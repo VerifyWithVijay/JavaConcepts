@@ -1,27 +1,37 @@
 package myPackage;
 
+import java.util.Random;
+import java.util.Scanner;
+
 public class Test {
     public static void main(String[] args) {
 
-        int age = 19;
-        System.out.println(age>18?"Eligible to vote":"Not eligible");
+        Random random = new Random();
+        int numberToGuess = random.nextInt(100)+1;
 
-        int number=1;
-        String result = (number>18)?(number>25?"Goa-Can drink": "Goa-Can't drink")  :"You can't go to Goa";
-        System.out.println(result);
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Enter the number");
+        int guess;
+        int attempts=0;
 
-        int a = 45,b=20;
-        System.out.println(a>b?"a is greater":"b is greater");
+        while(true) {
+            guess = scanner.nextInt();
+            attempts++;
 
-        int n = 11;
-        System.out.println(n%2==0?"Even Number":"Odd Number");
+            if(guess<numberToGuess)
+            {
+                System.out.println("The number is low: Try Again!! ");
+            }
+            else if(guess>numberToGuess)
+            {
+                System.out.println("The number is High: Try Again!! ");
+            }
+            else
+            {
+                System.out.println("Correct! You guessed the correct number "+ attempts +" in attempts");
+            }
 
-        int x = -50, y=40, z=30;
-
-        int largest = (x>y) ? (x>z)?x:y  : (y>z)?y:z;
-        System.out.println(largest);
-
-
+        }
 
     }
 }

@@ -6,24 +6,14 @@ public class JavaBasics {
 
     public static void main(String[] args) {
 
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("Enter the browser");
-        String browser = scanner.next();
+       StringBuffer sb = new StringBuffer("Java");
+       sb.append(" Programming");
+        System.out.println(sb);
+        sb.delete(5,16);
+        System.out.println(sb);
+        sb.replace(0,4,"C++");
+        System.out.println(sb);
 
-        switch(browser.toLowerCase())
-{           case "chrome":
-                System.out.println("Launch Chrome browser");
 
-            case "firefox":
-                System.out.println("Launch Firefox browser");
-                break;
-            case "safari":
-                System.out.println("Launch Safari browser");
-                break;
-
-            default:
-                System.out.println("Please pass the right browser");
-                break;
-        }
     }
 }
